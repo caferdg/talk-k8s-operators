@@ -1,0 +1,53 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - events
+  verbs:
+  - create
+  - patch
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - platform.caferdg.io
+  resources:
+  - gitlabgroups
+  - gitlabprojects
+  - notifiers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - platform.caferdg.io
+  resources:
+  - gitlabgroups/finalizers
+  - gitlabprojects/finalizers
+  - notifiers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - platform.caferdg.io
+  resources:
+  - gitlabgroups/status
+  - gitlabprojects/status
+  - notifiers/status
+  verbs:
+  - get
+  - patch
+  - update

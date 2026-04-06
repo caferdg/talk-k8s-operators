@@ -1,0 +1,10 @@
+apiVersion: platform.caferdg.io/v1alpha1
+kind: GitlabProject
+metadata:
+  name: backend
+spec:
+  parentGroupRef: go-lyon-corp
+  trackedBranch: main
+  properties:
+    name: Backend
+    visibility: private

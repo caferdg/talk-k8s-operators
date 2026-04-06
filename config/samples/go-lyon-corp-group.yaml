@@ -1,0 +1,7 @@
+apiVersion: platform.caferdg.io/v1alpha1
+kind: GitlabGroup
+metadata:
+  name: go-lyon-corp
+spec:
+  groupId: YOUR-GITLAB-GROUP-ID
+  tokenSecretRef: gitlab-token

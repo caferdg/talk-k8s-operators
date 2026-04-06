@@ -1,0 +1,3 @@
+resources:
+  - gitlab-token.yaml
+  - discord-webhook.yaml

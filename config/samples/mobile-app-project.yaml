@@ -1,0 +1,12 @@
+apiVersion: platform.caferdg.io/v1alpha1
+kind: GitlabProject
+metadata:
+  name: mobile-app
+spec:
+  parentGroupRef: go-lyon-corp
+  notifierRef: discord
+  trackedBranch: main
+  properties:
+    name: Mobile application
+    description: Our new mobile application :)
+    visibility: private

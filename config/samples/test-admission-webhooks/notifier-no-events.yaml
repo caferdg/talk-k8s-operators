@@ -1,0 +1,11 @@
+# Should be REJECTED: no events specified
+
+apiVersion: platform.caferdg.io/v1alpha1
+kind: Notifier
+metadata:
+  name: test-no-events
+  namespace: demo-system
+spec:
+  events: []
+  discord:
+    webhookSecretRef: discord

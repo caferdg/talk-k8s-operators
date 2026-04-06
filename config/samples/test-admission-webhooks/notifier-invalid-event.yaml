@@ -1,0 +1,13 @@
+# Should be REJECTED: invalid event name
+
+apiVersion: platform.caferdg.io/v1alpha1
+kind: Notifier
+metadata:
+  name: test-invalid-event
+  namespace: demo-system
+spec:
+  events:
+    - pipeline_success
+    - pipeline_exploded
+  discord:
+    webhookSecretRef: discord

@@ -1,0 +1,10 @@
+namespace: demo-system
+
+resources:
+  # External secrets must be applied first (secrets needed by CRs)
+  - ext-secrets
+  # CRs
+  - go-lyon-corp-group.yaml
+  - discord-notifier.yaml
+  - backend-project.yaml
+  - mobile-app-project.yaml

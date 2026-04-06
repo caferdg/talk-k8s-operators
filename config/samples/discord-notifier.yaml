@@ -1,0 +1,12 @@
+apiVersion: platform.caferdg.io/v1alpha1
+kind: Notifier
+metadata:
+  name: discord
+spec:
+  events:
+    - pipeline_running
+    - pipeline_success
+    - pipeline_failed
+    - new_commit
+  discord:
+    webhookSecretRef: discord-webhook

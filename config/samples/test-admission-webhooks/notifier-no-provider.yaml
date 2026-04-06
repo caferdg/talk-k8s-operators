@@ -1,0 +1,10 @@
+# Should be REJECTED: no provider configured
+
+apiVersion: platform.caferdg.io/v1alpha1
+kind: Notifier
+metadata:
+  name: test-no-provider
+  namespace: demo-system
+spec:
+  events:
+    - pipeline_success
